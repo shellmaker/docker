@@ -1,0 +1,7 @@
+FROM ubuntu:latest  
+RUN apt-get update  
+RUN apt-get install --no-install-recommends --no-install-suggests -y curl  
+WORKDIR /data  
+VOLUME /data
+COPY curl_exec.sh .  
+CMD bash -c "./curl_exec.sh"
